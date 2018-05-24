@@ -1,0 +1,166 @@
+<html>
+
+<head>
+    <title>Toko Online</title>
+    <script src="../assets/js/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+
+    <link rel="stylesheet" href="../assets/css/materialize.min.css">
+
+    <script src="../assets/js/materialize.min.js"></script>
+</head>
+<style>
+    .border {
+        border: 1px solid black;
+    }
+
+    nav a {
+        color: black !important;
+    }
+
+    .title-section {
+        padding: 15px !important;
+        color: white;
+        font-size: 20px;
+    }
+
+    .row-product {
+        margin-bottom: 10px;
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+
+    .product-card {
+        padding: 2px !important;
+    }
+
+    .product-card-content {
+        border: 1px solid #DB5F56 !important;
+    }
+
+    .product-name {
+        padding: 0px 10px;
+    }
+
+    .product-price {
+        padding: 0px 10px;
+    }
+    
+    .footer-section{
+        color: white;
+        text-align: center;
+    }
+    
+</style>
+
+<body>
+    <div class="container" style="border-left: 1px solid #f2f2f2; border-right: 1px solid #f2f2f2;">
+        <nav class="nav-extended" style="background: white; color: black; box-shadow: 0px 0px 0px 0px !important; border: 1px solid whitesmoke">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Toko Online</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Register</a></li>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="#test1">Home</a></li>
+                    <li class="tab"><a class="active" href="#test2">Browse Product</a></li>
+                    <li class="tab"><a href="#test3">cart</a></li>
+                    <li class="tab"><a href="#test3">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="carousel carousel-slider center">
+            <div class="carousel-item red white-text" href="#one!">
+                <h2>First Panel</h2>
+                <p class="white-text">This is your first panel</p>
+            </div>
+            <div class="carousel-item amber white-text" href="#two!">
+                <h2>Second Panel</h2>
+                <p class="white-text">This is your second panel</p>
+            </div>
+            <div class="carousel-item green white-text" href="#three!">
+                <h2>Third Panel</h2>
+                <p class="white-text">This is your third panel</p>
+            </div>
+            <div class="carousel-item blue white-text" href="#four!">
+                <h2>Fourth Panel</h2>
+                <p class="white-text">This is your fourth panel</p>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 10px;">
+            <div class="input-field col s10 push-s1">
+                <input placeholder="Search" id="first_name" type="text" class="validate">
+            </div>
+            <div class="">
+                <div class="col s12 red title-section">Spotlight</div>
+                <div class="row row-product">
+                    <div class="col s6 m4 l3 product-card">
+                        <div class="product-card-content" style="height: 260px;">
+                            <div class="img" style="height:80%">
+                                <img src="../assets/img/Laptop_on_Desk_HD_Wallpaper.jpg" style="width: 100%; height: 100%;">
+                            </div>
+                            <div class="product-name" style="height:10%">Laptop</div>
+                            <div class="product-price" style="height:10%">Rp. 200,000</div>
+                        </div>
+                    </div>
+                    <div class="col s6 m4 l3 product-card">
+                        <div class="product-card-content" style="height: 260px;">
+                            <div class="img" style="height:80%">
+                                <img src="../assets/img/Laptop_on_Desk_HD_Wallpaper.jpg" style="width: 100%; height: 100%;">
+                            </div>
+                            <div class="product-name" style="height:10%">Laptop</div>
+                            <div class="product-price" style="height:10%">Rp. 200,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="col s12 red">
+            <div class="container">
+                <div class="row" style="margin: 0px;">
+                    <div class="col s4 footer-section">
+                        <ul>
+                            <li>Lorem</li>
+                            <li>Ipsum</li>
+                            <li>Dolor</li>
+                        </ul>
+                    </div>
+                    <div class="col s4 footer-section">
+                        <ul>
+                            <li>Lorem</li>
+                            <li>Ipsum</li>
+                            <li>Dolor</li>
+                        </ul>
+                    </div>
+                    <div class="col s4 footer-section">
+                        <ul>
+                            <li>Lorem</li>
+                            <li>Ipsum</li>
+                            <li>Dolor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        M.AutoInit()
+        $('.carousel.carousel-slider').carousel({
+            full_width: true,
+            indicators: true,
+            dist: 0,
+
+        });
+    });
+
+</script>
+
+</html>

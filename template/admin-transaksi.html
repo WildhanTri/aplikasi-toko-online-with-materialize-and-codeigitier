@@ -1,0 +1,184 @@
+<html>
+
+<head>
+    <title>Toko Online</title>
+    <script src="../assets/js/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/css/materialize.min.css">
+    <script src="../assets/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<style>
+    body {
+        padding-left: 300px;
+    }
+
+    .table-transaksi-barang tr td {
+        padding: 5px 5px
+    }
+
+    @media only screen and (max-width: 992px) {
+        body {
+            padding-left: 0px;
+        }
+    }
+
+</style>
+<div class="" style="border-left: 1px solid #f2f2f2; border-right: 1px solid #f2f2f2;">
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="../assets//img/606314.jpg" style="width: 100%; height: 100%">
+                </div>
+                <a href="#user"><img class="circle" src="../assets/img/cda2e57606986d062f7c9e46319b3061.jpg"></a>
+                <a href="#name"><span class="white-text name">Admin</span></a>
+                <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a class="subheader">Menu</a></li>
+        <li><a class="waves-effect" href="#!">Produk</a></li>
+        <li><a class="waves-effect" href="#!">Stok</a></li>
+        <li><a class="waves-effect" href="#!">Transaksi</a></li>
+        <li><a class="waves-effect" href="#!">Customer</a></li>
+        <li><a class="waves-effect" href="#!">Log Aktivitas</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="waves-effect" href="#!">Log Out</a></li>
+    </ul>
+</div>
+
+<body>
+    <nav>
+        <div class="nav-wrapper" style="padding: 0px 15px;">
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <div class="row">
+                        <div class="col s2"><i class="material-icons">date_range</i></div>
+                        <div class="col s10" id="tanggal"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row" style="width: 140px;">
+                        <div class="col s2"><i class="material-icons">access_time</i></div>
+                        <div class="col s10"><text id="jam"></text></div>
+                    </div>
+                </li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="col s12" style="height: 100%; padding: 15px">
+        <div class="row">
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                <img src="../assets/img/AlmeoCup2.jpg" class="circle" style="width: 100px; height: 100px">
+                            </div>
+                            <div class="col s12 center-align">
+                                <p>Customer</p>
+                            </div>
+                            <div class="col s12">
+                                <div class="input-field col s12">
+                                    <input placeholder="ID Transaksi" id="id_transaksi" type="text" class="validate">
+                                    <label for="id_transaksi">ID Transaksi</label>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <div class="input-field col s12">
+                                    <input placeholder="Waktu Transaksi" id="waktu_transaksi" type="text" class="validate">
+                                    <label for="waktu_transaksi">Waktu Transaksi</label>
+                                </div>
+                            </div>
+                            <div class="col s12">
+                                <div class="input-field col s12">
+                                    <input placeholder="Total Belanja" id="total_belanja" type="text" class="validate">
+                                    <label for="total_belanja">Total Belanja</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+                <div class="col s8">
+                </div>
+            </div>
+            <div class="col s8" style="background: grey; height: 500px;">
+                <ul class="collection">
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle grey">folder</i>
+                        <span class="title">Nama Barang</span>
+                        <p>First Line <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle green">insert_chart</i>
+                        <span class="title">Title</span>
+                        <p>First Line <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle red">play_arrow</i>
+                        <span class="title">Title</span>
+                        <p>First Line <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+    var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth();
+    var thisDay = date.getDay(),
+        thisDay = myDays[thisDay];
+    var yy = date.getYear();
+    var year = (yy < 1000) ? yy + 1900 : yy;
+    document.getElementById('tanggal').innerHTML = thisDay + ', ' + day + ' ' + months[month] + ' ' + year;
+
+
+    function startTime() {
+        var today = new Date(),
+            curr_hour = today.getHours(),
+            curr_min = today.getMinutes(),
+            curr_sec = today.getSeconds();
+        curr_hour = checkTime(curr_hour);
+        curr_min = checkTime(curr_min);
+        curr_sec = checkTime(curr_sec);
+        console.log(curr_hour + ":" + curr_min + ":" + curr_sec)
+        $('#jam').text(curr_hour + ":" + curr_min + ":" + curr_sec)
+    }
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+    setInterval(startTime, 1000);
+
+    $(document).ready(function() {
+        $('.sidenav').sidenav();
+    });
+
+</script>
+
+</html>

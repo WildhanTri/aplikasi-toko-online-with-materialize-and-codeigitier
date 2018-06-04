@@ -6,9 +6,6 @@ class main extends MY_Controller {
     
     
     function index(){
-        $this->load->view('toko');
-    }
-    function admin(){
         if($this->session->userdata('nama') != null){
             $data = array (
                 "page" => "Pegawai"
@@ -20,6 +17,9 @@ class main extends MY_Controller {
             );
             $this->load->view('login', $data);
         }
+    }
+    function login(){
+        $this->load->view('login');
     }
 	function prosesLogin(){
 		$username = $this->input->post('username');

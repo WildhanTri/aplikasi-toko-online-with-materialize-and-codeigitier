@@ -2,25 +2,22 @@
 
 defined('BASEPATH') or exit ('No Direct script access allowed');
 
-class main extends MY_Controller {
-    
+class admin extends MY_Controller {
     
     function index(){
-        $this->load->view('toko');
-    }
-    function admin(){
         if($this->session->userdata('nama') != null){
             $data = array (
-                "page" => "Pegawai"
+                "page" => "Home"
             );
-            $this->load->view('home', $data);
+            $this->load->view('admin/home', $data);
         }else{
             $data = array (
                 "page" => "Login"
             );
-            $this->load->view('login', $data);
+            $this->load->view('admin/login', $data);
         }
     }
+    
 	function prosesLogin(){
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
@@ -29,7 +26,7 @@ class main extends MY_Controller {
 			'password' => md5($password)
 			);
         
-		$cek = $this->model->selectWhere("user",$where);
+		$cek = $this->model->selectWhere("admin",$where);
 		if(count($cek) > 0){
  
 			$data_session = array(
@@ -40,14 +37,14 @@ class main extends MY_Controller {
  
 			$this->session->set_userdata($data_session);
  
-			redirect(base_url("index.php/main"));
+			redirect(base_url("admin"));
  
 		}else{
 			echo "Username dan password salah !";
 		}
 	}
-    function dataGaji(){
-        $this->load->view('gaji');
+    function data_produk(){
+        $this->load->view('admin/produk/produk_index');
     }
     function dataAbsen(){
         $this->load->view('absen');
@@ -57,7 +54,7 @@ class main extends MY_Controller {
     }
     function logout(){
 		$this->session->sess_destroy();
-		redirect(base_url('index.php/main/'));
+		redirect(base_url('admin'));
 	}
 }
 

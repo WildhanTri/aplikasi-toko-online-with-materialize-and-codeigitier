@@ -1,0 +1,36 @@
+body {
+    padding-left: 300px;
+    background: #f4f4f4;
+}
+
+@media only screen and (max-width: 992px) {
+    body {
+        padding-left: 0px;
+    }
+}
+
+.table-list {
+    box-shadow: 0px 0px 3px 0px #e0e0e0;
+}
+
+.table-list tr th {
+    background: #ee6e73;
+    color: white;
+    padding: 10px 15px;
+}
+
+.table-list tr td {
+    border: 1px solid whitesmoke;
+    padding: 10px 15px;
+    color: #7d7d7d;
+}
+
+.section {
+    background-color: white;
+    padding: 15px 15px;
+    box-shadow: 0px 0px 5px 0px #cfcfcf;
+}
+
+.section h4 {
+    margin-top: 0px;
+}
